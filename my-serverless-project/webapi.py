@@ -34,7 +34,7 @@ def handler(event, context):
         except Exception as e:
             return {"statusCode": 400, "error": "Exception occured in code- couldnt add color"}
         finally:
-            pass
+            cnxn.close()
     
     if event['httpRequest'] == "DELETE":
         try:
@@ -47,7 +47,7 @@ def handler(event, context):
         except Exception as e:
             return {"statusCode": 400, "error": "Exception occured in code- couldnt delete color"}
         finally:
-            pass
+            cnxn.close()
 
     if event['httpRequest'] == "PUT":
         try:
@@ -63,6 +63,8 @@ def handler(event, context):
         except Exception as e:
             return {"statusCode": 400, "error": "Exception occured in code- couldnt edit color"}
         finally:
-            pass
+            cnxn.close()
+    
+
 # def post_handler(event, context):
 #     return{"event":event}
