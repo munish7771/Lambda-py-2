@@ -64,7 +64,6 @@ def handler(event, context):
             return {"statusCode": 400, "error": "Exception occured in code- couldnt edit color"}
         finally:
             cnxn.close()
-    
 
 # def post_handler(event, context):
 #     return{"event":event}

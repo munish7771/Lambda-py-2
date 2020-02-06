@@ -122,3 +122,4 @@ plugins:
 custom:
   pythonRequirements:
     dockerizePip: true
+    # can set it to false 
